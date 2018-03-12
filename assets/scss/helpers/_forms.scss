@@ -1,0 +1,75 @@
+button {
+  &.btn {
+    &.arrow {
+      &:after { @include opacity(1); position: inherit; font-size: inherit; right: inherit; vertical-align: middle; margin-left: 5px; }
+    }
+  }
+}
+
+input[type="text"],input[type="email"], input[type="date"], input[type="time"], input[type="search"], input[type="password"], input[type="number"], input[type="tel"], textarea.form-control { @include border-radius(0px); @include transition(.3s); @include box-shadow(none); -webkit-appearance: none; background-color: rgba(#000,.05); border: none; outline: none !important; padding-top: 13px; padding-bottom: 13px; width: 100%; height: inherit; font-size: 13px;
+  &:active, &:focus { @include box-shadow(none); background-color: rgba(#000,.15); }
+  &:hover { @include box-shadow(none); background-color: rgba(#000,.1); }
+}
+
+textarea { resize: vertical; }
+
+.btn { @include border-radius(0px); border-width: 2px; border-style: solid; font-size: 10px; font-weight: bold; text-transform: uppercase; position: relative; //overflow: hidden;
+  &:hover, &:active, &:active:hover, &:focus { @include box-shadow(none); }
+  &.btn-primary { background-color: #000; color: #fff; border-color: #000;
+    &:hover, &:active, &:active:hover, &:focus { background-color: #000; }
+    &.btn-framed { color: #000;
+      &:hover, &:active, &:active:hover, &:focus { background-color: rgba(#000, .05); }
+      &.btn-light-frame { border-color: rgba(#000, .2);
+        &:hover, &:active, &:active:hover, &:focus { border-color: rgba(#000, .5); background-color: transparent; }
+      }
+    }
+  }
+  &.btn-default { background-color: #fff; color: #000; border-color: #fff;
+    &:hover, &:active, &:active:hover, &:focus { background-color: #fff; }
+    &.btn-framed { color: #fff;
+      &:hover, &:active, &:active:hover, &:focus { background-color: rgba(#fff, .1); }
+      &.btn-light-frame { border-color: rgba(#fff, .4);
+        &:hover, &:active, &:active:hover, &:focus { border-color: rgba(#fff, .6); background-color: transparent; }
+      }
+    }
+  }
+
+  &.btn-rounded { @include border-radius(30px); }
+  &.btn-framed { background-color: transparent; }
+  &.arrow { padding-right: 30px;
+    &:after { @include elegant-font; @include opacity(.6); content: "$"; position: absolute; font-size: 14px; right: 10px; }
+  }
+  &.roll-effect { padding-bottom: 4px; }
+}
+
+.input-group {
+  .btn { @include border-radius(0px); @include box-shadow(none); background-color: rgba(#000,.05); padding: 11px 12px; outline: none !important;  }
+  i { font-size: 18px; vertical-align: middle; }
+}
+.input-group-btn:last-child > .btn { margin-left: 0; }
+
+form {
+  label { margin-bottom: 15px;
+    &.error { position: absolute; bottom: -100%; left: 0; }
+  }
+  &.inputs-underline {
+    input[type="text"],input[type="email"], input[type="date"], input[type="time"], input[type="search"], input[type="password"], input[type="number"], input[type="tel"], textarea.form-control { -webkit-appearance: none; background-color: transparent; border-bottom: 2px solid rgba(#000,.05); padding-left: 0;
+      &:active, &:focus { @include box-shadow(none); padding-left: 12px; border-bottom: 2px solid rgba(#000,.15); }
+      &:hover { @include box-shadow(none); border-bottom: 2px solid rgba(#000,.1); }
+    }
+    .input-group {
+      .btn { background-color: transparent; border-bottom: 2px solid rgba(#000,.05); padding: 12px 12px; }
+    }
+  }
+  &.submitted {
+    .status { @include scale(1); }
+    .form-group, .input-group { pointer-events: none; }
+  }
+  .status { @include scale(.1); @include transit; top: -20px; right: -20px; position: absolute;
+    .status-icon { @include border-radius(50%); @include transit; @include shadow-big; width: 40px; height: 40px; background-color: grey; color: #fff; text-align: center; line-height: 40px;
+      &.valid { background-color: #50aa8d; }
+      &.invalid { background-color: #e45544; }
+    }
+    i { font-size: 18px; }
+  }
+}

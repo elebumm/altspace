@@ -1,0 +1,118 @@
+.navigation { @include transit; position: fixed; width: 100%; top: 0; left: 0; z-index: 99;
+  &.show-background { background-color: rgba(#000,.8);
+    &:hover { background-color: rgba(#000,.9); }
+  }
+  &.nav-btn-only {
+    .nav-btn { display: block; }
+    .left { display: block; }
+    .right { display: block; position: initial;
+      .navigation-links { @include opacity(0); @include transit; @include transform( translateY(20px) ); visibility: hidden; top: 100px; text-align: center; right: 0px; position: absolute; width: 100%;
+        li { display: block; font-size: 48px;
+          a { padding: 25px 0px;
+            &:after { display: none; }
+            &.hover-effect { padding: 10px 0;
+              span {
+                .hover-element { padding: 15px 0; }
+              }
+            }
+          }
+        }
+      }
+    }
+    .wrapper { padding: 20px 0; position: relative; }
+  }
+  .brand { z-index: 101; position: relative; display: inline-block; }
+  .wrapper { display: table; width: 100%; }
+  .left { display: table-cell; vertical-align: middle; }
+  .right { display: table-cell; text-align: right; vertical-align: middle; position: relative;
+    .navigation-links { list-style: none; padding-left: 0; font-size: 14px; font-weight: bold;
+      li { display: inline-block;
+        &.active {
+          a { @include opacity(1);
+            &:after { width: 100%; }
+          }
+        }
+        a { @include opacity(.5); @include transit();  position: relative; padding: 5px 8px;
+          &:after { @include transit; position: absolute; bottom: -1px; left: 0; content: ""; width: 0%; height: 2px; background-color: #fff; }
+          &:hover { @include opacity(1);
+            &:after { width: 100%; }
+          }
+        }
+      }
+    }
+  }
+  .nav-btn {  display: none; padding: 5px; cursor: pointer; position: absolute; top: 0; right: 0px; bottom: 0; margin: auto; height: 25px;
+    &:before { @include border-radius(50%); @include transition(1s); @include opacity(.9); @include transform( scale(.2) translate3d(0,0,0) ); @include backface-visibility(hidden); visibility: hidden; -webkit-perspective: 1000; @include backface-visibility(hidden); cursor: default; background-color: #000; width: 200px; height: 200px; position: absolute; left: -87px; top: 0; bottom: 0; right: 0; margin: auto; content: ""; z-index: -1; }
+    &:after { @include elegant-font; @include transit; @include opacity(0); @include transform( scale(.1) ); content: "\M"; position: absolute; font-size: 27px; color: #fff; top: -3px; left: -1px; }
+    figure { @include transit; width: 15px; height: 2px; margin-bottom: 3px; background-color: #fff; }
+  }
+  @-moz-document url-prefix() {
+    .nav-btn {
+    &:before { @include transition(1s); @include backface-visibility(hidden); @include transform( translate3d(0,0,0) ); width: 10px; height: 10px; position: absolute; left: 0px; top: 0; bottom: 0; right: 0; }
+    }
+  }
+  .nav > li > a { background-color: transparent; display: inline-block;
+    &:hover, &:active, &:focus { background-color: transparent; }
+  }
+  .nav { margin: 15px 0; }
+}
+
+.page-wrapper {
+  &.loading-done {
+    .hero-slide .bg-transfer { @include transform( scale(1) ); }
+  }
+}
+
+.hero-section { overflow: hidden; position: relative;
+  &:after { background-color: rgba(#000,.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; content: ""; }
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type="text"],input[type="email"], input[type="date"], input[type="time"], input[type="search"], input[type="password"], input[type="number"], input[type="tel"], textarea.form-control { padding-bottom: 12px; }
+  }
+  &.blog-title { height: 400px !important;
+    &:after { background-color: rgba(#000, .8); }
+    .wrapper { padding-top: 20px; }
+  }
+  form {
+    &.form-has-background-padding { padding: 30px 30px 10px 30px; background-color: rgba(#000, .6);
+      .btn { width: 100%; margin-bottom: 20px; }
+      .form-group, .input-group { margin-bottom: 20px; }
+    }
+    .btn  { @include box-shadow(none); padding: 8px 12px; outline: none !important; font-size: 16px; text-transform: none; width: 100%;
+      i { font-size: 18px; vertical-align: middle; }
+    }
+  }
+  .wrapper { display: table; position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 2;
+    .hero-title { display: table-cell; vertical-align: middle;
+    }
+  }
+  .owl-carousel, .owl-stage-outer, .owl-stage, .owl-item { height: 100%; }
+  .owl-item, .hero-slide { @include backface-visibility(hidden); }
+  .hero-slide { position: relative; height: 100%; width: 100%; overflow: hidden; /*@include transform( scale(1.2) ); @include transit;*/
+    .bg-transfer { @include transform( scale(1.2) ); @include transition(.8s); }
+  }
+  p { font-size: 16px; line-height: 22px; margin-bottom: 35px; }
+  .video-tour { font-size: 16px;
+    i { margin-right: 15px; }
+  }
+  .space { height: 40px; }
+}
+
+.page-wrapper {
+  &:before { @include opacity(.9); @include transit; @include transform( translateX(100%) ); pointer-events: none; background-color: #000; width: 100%; height: 100%; position: absolute; top: 0; left: 0; content: ""; z-index: 97; }
+  &.show-navigation {
+    .nav-btn {
+      &:before { visibility: visible; @include transform( scale(30) ); }
+      &:after { @include opacity(1); @include transform( scale(1) ); @include transition-delay(.1s); }
+      figure { @include opacity(0); @include transform( translateX(5px) scaleX(1.3) ); }
+      figure:nth-child(2) { @include transition-delay(.1s); }
+      figure:nth-child(3) { @include transition-delay(.2s); }
+    }
+    @-moz-document url-prefix() {
+      .nav-btn {
+        &:before { @include transform( scale(400) ); }
+      }
+    }
+    .navigation .right .navigation-links { visibility: visible; @include transition-delay(.2s); @include opacity(1); @include transform( translateY(0px) ); }
+    .hero-title, #page-content > div, #page-footer > div { pointer-events: none; }
+  }
+}

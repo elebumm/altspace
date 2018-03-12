@@ -1,0 +1,248 @@
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 992px - 1199px
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media (min-width: 992px) and (max-width: 1199px) {
+  body { font-size: 12px; }
+  h1 { font-size: 64px; }
+  h2 { font-size: 26px; margin-bottom: 40px; }
+  h3 { font-size: 14px; margin-bottom: 20px; }
+  h4 { font-size: 13px; }
+  p { line-height: 18px; }
+  .block { padding: 60px 0; }
+  .feature h3 { font-size: 16px; }
+  .framed { padding: 20px; }
+  .stage .description {
+    h2 { font-size: 18px; }
+    h3 { font-size: 11px; }
+    figure { font-size: 12px; }
+  }
+  .pricing-boxes .price-box {
+    h3 { font-size: 20px; }
+    .price { font-size: 16px; }
+  }
+  .pricing-boxes .price-box.framed .price-box-footer, .pricing-boxes .price-box.promoted.framed .price-box-footer { margin: 20px -20px -20px -20px; }
+  .contact .person .image { width: 120px; height: 120px; }
+  .person .image { width: 140px; height: 140px; }
+  .person.framed { padding: 20px 5px; }
+  .blog-item .image { height: 100px; }
+
+  .count-down {
+    .countdown-row {
+      .countdown-amount { font-size: 100px; margin-bottom: -10px; }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 768px - 991px
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media (min-width: 768px) and (max-width: 991px) {
+  body { font-size: 11px; }
+  blockquote { font-size: 18px;
+    p { line-height: 22px; }
+  }
+  h1 { font-size: 48px; }
+  h2 { font-size: 20px; margin-bottom: 30px; }
+  h3 { font-size: 12px; margin-bottom: 15px; }
+  h4 { font-size: 12px; }
+  p { line-height: 16px; }
+  .block { padding: 40px 0; }
+  .count-down {
+    .countdown-row {
+      .countdown-amount { font-size: 80px; margin-bottom: -10px; }
+    }
+  }
+  .detail { margin-bottom: 40px;
+    &.left-align {
+      .gallery {
+        padding-left: 50px;
+      }
+      .title {
+        .framed { padding-right: 70px; }
+      }
+    }
+    &.right-align {
+      .gallery {
+        padding-right: 50px;
+      }
+      .title {
+        .framed { padding-left: 70px; }
+      }
+    }
+  }
+  .feature h3 { font-size: 14px; }
+  .framed { padding: 20px; }
+  .logos .logo { padding-left: 0px; }
+  .stage {
+    .icon { width: 50px; height: 50px; line-height: 60px;
+      i { font-size: 20px; }
+    }
+  }
+  .stage .description { padding-left: 60px;
+    h2 { font-size: 13px; }
+    h3 { font-size: 10px; }
+    figure { font-size: 11px; }
+  }
+  .panel-group .panel .panel-heading h4 {
+    font-size: 11px;
+  }
+  .pricing-boxes .price-box {
+    h3 { font-size: 20px; }
+    .price { font-size: 16px; }
+  }
+  .pricing-boxes .price-box.framed .price-box-footer, .pricing-boxes .price-box.promoted.framed .price-box-footer { margin: 20px -20px -20px -20px; }
+  .contact .person .image { width: 100px; height: 100px; }
+  .person .image { width: 140px; height: 140px; }
+  .person.framed { padding: 20px 5px; }
+  .blog-item .image { height: 100px; }
+  .marketing-banner {
+    h2 { margin-bottom: 0; }
+  }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// max to 767px
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media (max-width: 767px) {
+  body { font-size: 12px; }
+  blockquote { padding-left: 0;
+    p {
+      &:before { display: none; }
+    }
+  }
+  h1 { font-size: 32px; margin-bottom: 20px; }
+  h2 { font-size: 24px; margin-bottom: 20px; }
+  h3 { font-size: 14px; margin-bottom: 20px; }
+  h4 { font-size: 13px; }
+  p { line-height: 18px; }
+  ul { line-height: 20px;
+    li { margin-bottom: 10px; }
+  }
+  .block { padding: 30px 0; }
+  .big-gallery {
+    .slide { width: 100%;
+      .container { padding: 0; margin: 0; }
+    }
+  }
+  .big-gallery .slide .description h3 { margin-top: -80px; margin-bottom: 0px; padding-top: 80px; padding-right: 40px; margin-left: 10px; }
+  .count-down {
+    .countdown-row {
+      .countdown-section {
+        &:after { display: none; }
+      }
+      .countdown-amount { font-size: 22px; margin-bottom: 0px; }
+      .countdown-period { font-size: 9px; }
+    }
+  }
+  .container .block { padding: 20px; }
+  .owl-nav-wrapper #big-gallery-nav { top: -55px; }
+  .detail { margin-bottom: 40px;
+    .title { margin-bottom: 40px; }
+    &.left-align {
+      .gallery { margin-bottom: 30px;
+        padding-left: 0px;
+      }
+      .title {
+        .framed { padding: 10px; }
+      }
+    }
+    &.right-align {
+      .gallery {
+        padding-right: 0px;
+      }
+      .title { text-align: left;
+        .framed { padding: 10px; }
+      }
+    }
+  }
+  #page-footer {
+    .contact-data { text-align: left; }
+    .numbers { margin-top: 40px; }
+  }
+  .feature.has-icon .description { padding-left: 30px; }
+  .panel-group.background-solid .panel:last-child { margin-bottom: 20px; }
+  .pricing-boxes .price-box.framed .price-box-footer, .pricing-boxes .price-box.promoted.framed .price-box-footer { margin: 20px -20px -20px -20px; }
+  .framed { padding: 20px; }
+  .stage { margin-bottom: 40px;
+    .description {
+      h2 { font-size: 16px; }
+      h3 { font-size: 11px; }
+      figure { font-size: 12px; }
+    }
+  }
+  thead th { padding-left: 8px; padding-right: 8px; }
+  tbody tr td, .pricing-table tbody tr td { padding: 10px 8px; }
+  .table-responsive {  }
+  .logos .owl-stage .owl-item .logo, .logos .owl-stage .owl-item { display: inline-block; }
+  .logos .logo { padding-left: 0px; }
+
+  .time-line .time-line-item .description { margin-left: 30px; }
+  .time-line .time-line-item .date { position: relative; }
+
+  .navigation {
+    &.nav-btn-only {
+      .right {
+        .navigation-links { top: 50px; text-align: right;
+          li { display: block; padding: 10px 0px; margin-bottom: 0; font-size: 28px; padding: 0;
+            a { padding: 5px 0px;
+              &.hover-effect { padding: 0; }
+            }
+          }
+        }
+      }
+    }
+    .nav-btn { display: block; }
+    .right {
+      .navigation-links { @include opacity(0); @include transit; @include transform( translateY(20px) ); visibility: hidden;
+        li { display: block; padding: 10px 0px; margin-bottom: 0; font-size: 28px;
+          a { padding: 5px 0px; }
+        }
+      }
+    }
+    .wrapper { padding: 20px 0;  position: relative; }
+    .left { display: block; }
+    .right { display: block; position: initial; }
+  }
+  .navigation-links { position: absolute; right: 5px; width: 100%; margin-top: 10px !important; }
+
+  .floor-selector h2 { font-size: 14px; }
+  .floor-selector .description { font-size: 9px; }
+  .floor-selector .floor { padding: 3px 5px; font-size: 9px; }
+
+  .hero-section {
+    .video-player, .gallery { margin-top: 20px; }
+    p { font-size: 12px; line-height: 18px; }
+  }
+  //.hero-section .wrapper .hero-title { padding-bottom: 60px; }
+  .hero-section form { margin-top: 20px; margin-bottom: 20px; }
+
+  .number { text-align: center; margin-bottom: 20px; }
+
+  .owl-nav-wrapper { position: absolute; width: 100%; right: 5px; }
+
+  .navigation .right .navigation-links li a.roll-effect { padding: 0; }
+  .roll-effect span figure { padding: 5px 0; }
+  .navigation.nav-btn-only .right .navigation-links li a.roll-effect { padding: 0; }
+  .navigation.nav-btn-only .right .navigation-links li a.roll-effect span figure { padding: 5px 0; }
+
+  .width-10 { width: 100%; }
+  .width-20 { width: 100%; }
+  .width-25 { width: 100%; }
+  .width-30 { width: 100%; }
+  .width-33 { width: 100%; }
+  .width-40 { width: 100%; }
+  .width-50 { width: 100%; }
+  .width-60 { width: 100%; }
+  .width-70 { width: 100%; }
+  .width-80 { width: 100%; }
+  .width-90 { width: 100%; }
+
+  .version-selector {
+    .version { text-align: center; display: block;
+      .description { margin-left: 0; }
+    }
+  }
+
+}
+
+

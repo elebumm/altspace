@@ -1,0 +1,68 @@
+body { color: $color-dark; font-size: 13px; font-family: 'Montserrat', sans-serif; position: relative;
+  &.has-loading-screen {
+    .pace { visibility: visible; }
+    .page-wrapper { position: relative; overflow: hidden;
+      &:after { @include transit; @include opacity(1); @include translateX(0); height: 100%; width: 100%; content: ""; background-color: #000; position: absolute; top: 0; left: 0; z-index: 98; }
+      &.hide-loading-screen {
+        &:after { display: none; }
+      }
+    }
+    &.pace-done {
+      .page-wrapper {
+        &:after { @include opacity(0);}
+      }
+    }
+  }
+  .pace { visibility: hidden; }
+  .page-wrapper { position: relative; overflow: hidden; }
+}
+
+a { @include transition(.2s ease-in-out); text-decoration: none; color: #000;
+  &:hover, &:active, &:focus { outline: none !important; text-decoration: none; color: #000; }
+  &.link { color: #000; font-size: 10px; font-weight: bold; text-transform: uppercase; }
+  &.arrow { display: inline-block; position: relative; margin-right: 20px;
+    &:after { @include elegant-font; @include opacity(.6); content: "$"; position: absolute; font-size: 14px; right: -15px; }
+  }
+  &.icon {
+    i { margin-left: 4px; margin-right: 4px; }
+  }
+}
+
+img { max-width: 100%; }
+
+blockquote { padding: 0; font-size: 22px; border-left: none; margin: 10px 0; padding-left: 60px;
+  p { @include opacity(1); line-height: 30px; position: relative;
+    &:before { @include opacity(.2); @include elegant-font; content: "\{"; font-size: 80px; position: absolute; left: -80px; bottom: -40px; }
+  }
+  footer { @include opacity(.6); font-size: 14px; text-transform: uppercase; font-weight: bold; color: inherit;
+    figure { font-size: 12px; text-transform: none; font-weight: normal; margin-left: 13px; }
+  }
+}
+
+dl { margin-bottom: 0;
+  dt { font-weight: 700; float: left; padding: 2px 0; }
+  dd { text-align: right; padding: 2px 0; }
+}
+
+h1 { font-size: 72px; font-weight: bold; margin-top: 0; margin-bottom: 40px; }
+h2 { font-size: 30px; font-weight: bold; margin-top: 5px; margin-bottom: 60px; }
+h3 { font-size: 16px; font-weight: bold; margin-bottom: 30px; }
+h4 { font-size: 14px; }
+h1, h2, h3, h4, h5, h6, a {
+  &.framed { display: inline-block; }
+}
+
+hr { border-top: 1px solid #e4e4e4; margin-top: 25px; margin-bottom: 25px; }
+
+html, body { height: 100%; }
+
+p, address { @include opacity(.6); line-height: 20px; }
+
+ul { padding-left: 12px; margin: 25px 0; line-height: 30px;
+  &.check-marks { list-style: none; padding-left: 0; margin-left: 30px;
+    li {
+      &:before { @include elegant-font; content: "\e052";
+        left: -15px; position: relative; margin-left: -15px; }
+    }
+  }
+}
