@@ -2452,7 +2452,7 @@ hr {
   border-bottom: none;
 }
 .pricing-boxes .price-box .values figure i {
-  font-size: 18px;
+  font-size: 15px;
 }
 .pricing-boxes .price-box .values figure.not-available {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
