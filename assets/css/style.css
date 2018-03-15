@@ -35,6 +35,10 @@ Headers:		'Montserrat', sans-serif;
   left: 0;
   z-index: 99;
 }
+
+.words {
+  display: none;
+}
 .navigation.show-background {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -2145,6 +2149,7 @@ hr {
   margin-bottom: 0;
 }
 
+
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -2181,6 +2186,10 @@ hr {
   height: 100%;
   width: 100%;
   background: #fff;
+}
+
+.group-column {
+  height: 140px;
 }
 
 .pace.pace-inactive {
@@ -3295,6 +3304,17 @@ form .status i {
     font-size: 12px;
   }
 
+ .checks {
+   display: none;
+ }
+
+ .words {
+   display: block;
+ }
+ .list-values {
+   display: none;
+ }
+
   blockquote {
     padding-left: 0;
   }
@@ -3625,3 +3645,4 @@ form .status i {
 nav .hover-element {
   color: white !important;
 }
+
